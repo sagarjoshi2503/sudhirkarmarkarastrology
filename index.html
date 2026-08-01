@@ -155,6 +155,13 @@
   }
   .lang-switch button:hover, .lang-switch button:focus-visible{color:var(--gold-light);}
   .lang-switch button.active{background:var(--gold); color:var(--night); font-weight:600;}
+  /* Hindi/Marathi labels render in a system Devanagari font, not the custom
+     webfont — avoids pulling in Mukta's Devanagari subset (60-100 KiB) just
+     to paint two short button labels. */
+  .lang-switch button[data-lang="hi"], .lang-switch button[data-lang="mr"],
+  .lang-switch-mobile button[data-lang="hi"], .lang-switch-mobile button[data-lang="mr"]{
+    font-family:'Nirmala UI','Noto Sans Devanagari','Devanagari Sangam MN',sans-serif;
+  }
   .lang-switch-mobile{display:none;}
 
   /* ---------- HERO ---------- */
