@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudhir Karmarkar — Vedic Astrologer, Nagpur</title>
+<meta name="description" content="Sudhir Karmarkar, Vedic astrologer in Nagpur, Maharashtra with 50 years of experience in kundli making, kundli milan and life guidance. Telephonic and WhatsApp consultations for ₹3,000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#12162E;
+    --night-2:#1B2154;
+    --night-3: #232B66;
+    --gold:#C9A227;
+    --gold-light:#EAD08A;
+    --vermillion:#9B3922;
+    --vermillion-light:#C25A3A;
+    --parchment:#F4EBD6;
+    --parchment-2:#EADFC2;
+    --ink:#1C1710;
+    --ink-soft:#4A4433;
+    --teal:#2F5D57;
+    --line: rgba(201,162,39,0.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Mukta', sans-serif;
+    background:var(--parchment);
+    color:var(--ink);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    letter-spacing:0.01em;
+  }
+  /* Devanagari headings need a Devanagari-capable display face */
+  body.lang-hi h1, body.lang-hi h2, body.lang-hi h3, body.lang-hi .display{
+    font-family:'Tiro Devanagari Hindi', serif;
+    letter-spacing:0;
+  }
+  body.lang-mr h1, body.lang-mr h2, body.lang-mr h3, body.lang-mr .display{
+    font-family:'Tiro Devanagari Marathi', serif;
+    letter-spacing:0;
+  }
+  body.lang-hi .amt, body.lang-mr .amt{ letter-spacing:0; }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- LANGUAGE SWITCH ---------- */
+  .lang-switch{
+    display:flex; gap:2px; border:1px solid var(--line); border-radius:2px; overflow:hidden;
+  }
+  .lang-switch button{
+    font-family:'Mukta', sans-serif;
+    background:transparent; border:none; cursor:pointer;
+    padding:8px 12px; font-size:13px; letter-spacing:0.03em;
+    color:rgba(244,235,214,0.65);
+    transition:background .2s ease, color .2s ease;
+  }
+  .lang-switch button:hover, .lang-switch button:focus-visible{color:var(--gold-light);}
+  .lang-switch button.active{background:var(--gold); color:var(--night); font-weight:600;}
+  .lang-switch-mobile{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(ellipse at 78% 18%, rgba(234,208,138,0.10), transparent 45%),
+      linear-gradient(160deg, var(--night) 0%, var(--night-2) 55%, var(--night-3) 100%);
+    color:var(--parchment);
+    overflow:hidden;
+    padding-bottom:40px;
+  }
+  .stars{position:absolute; inset:0; pointer-events:none;}
+  .star{
+    position:absolute; width:2px; height:2px; background:var(--gold-light);
+    border-radius:50%; opacity:0.55;
+    animation: twinkle 4.5s ease-in-out infinite;
+  }
+  @keyframes twinkle{
+    0%,100%{opacity:0.15;}
+    50%{opacity:0.85;}
+  }
+
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:26px 0 0;
+    position:relative; z-index:3;
+    gap:20px;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:12px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:19px; letter-spacing:0.04em;
+    color:var(--gold-light);
+    flex:none;
+  }
+  .brandmark .sigil{width:26px; height:26px; flex:none;}
+  .nav-links{
+    display:flex; gap:34px; font-size:14px; letter-spacing:0.06em; text-transform:uppercase;
+    color:rgba(244,235,214,0.75);
+    flex:1;
+  }
+  body.lang-hi .nav-links, body.lang-mr .nav-links{text-transform:none; letter-spacing:0.01em; font-size:15px;}
+  .nav-links a{transition:color .25s ease;}
+  .nav-links a:hover, .nav-links a:focus-visible{color:var(--gold-light);}
+  .nav-right{display:flex; align-items:center; gap:18px; flex:none;}
+  .nav-cta{
+    font-size:13px; letter-spacing:0.05em; text-transform:uppercase;
+    border:1px solid var(--gold); color:var(--gold-light);
+    padding:9px 18px; border-radius:2px;
+    transition:background .25s ease, color .25s ease;
+    white-space:nowrap;
+  }
+  body.lang-hi .nav-cta, body.lang-mr .nav-cta{text-transform:none; letter-spacing:0.01em;}
+  .nav-cta:hover, .nav-cta:focus-visible{background:var(--gold); color:var(--night);}
+
+  .hero-grid{
+    position:relative; z-index:2;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    align-items:center;
+    gap:40px;
+    padding:70px 0 40px;
+  }
+  .eyebrow{
+    display:flex; align-items:center; gap:12px;
+    font-size:13px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold-light); margin-bottom:22px;
+  }
+  body.lang-hi .eyebrow, body.lang-mr .eyebrow{text-transform:none; letter-spacing:0.02em; font-size:14.5px;}
+  .eyebrow::before{content:""; width:32px; height:1px; background:var(--gold); flex:none;}
+  .hero h1{
+    font-size:clamp(38px, 5.6vw, 64px);
+    line-height:1.15;
+    color:var(--parchment);
+    margin-bottom:18px;
+  }
+  .hero h1 em{
+    font-style:italic; color:var(--gold-light);
+  }
+  body.lang-hi .hero h1 em, body.lang-mr .hero h1 em{font-style:normal;}
+  .hero-sub{
+    font-size:18px; color:rgba(244,235,214,0.82);
+    max-width:480px; margin-bottom:34px;
+    font-weight:300;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:44px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:15px 26px; font-size:14.5px; letter-spacing:0.03em;
+    border-radius:2px; font-weight:600; cursor:pointer;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .btn-primary{
+    background:var(--vermillion); color:var(--parchment);
+    box-shadow:0 8px 24px rgba(155,57,34,0.35);
+  }
+  .btn-primary:hover, .btn-primary:focus-visible{background:var(--vermillion-light); transform:translateY(-2px);}
+  .btn-ghost{
+    background:transparent; color:var(--gold-light); border:1px solid var(--line);
+  }
+  .btn-ghost:hover, .btn-ghost:focus-visible{border-color:var(--gold); background:rgba(201,162,39,0.08);}
+
+  .hero-stats{
+    display:flex; gap:0; border-top:1px solid var(--line); padding-top:26px; max-width:540px;
+    flex-wrap:wrap;
+  }
+  .hero-stats div{padding-right:28px; margin-right:28px; border-right:1px solid var(--line);}
+  .hero-stats div:last-child{border-right:none; margin-right:0; padding-right:0;}
+  .hero-stats .num{
+    font-family:'Cormorant Garamond', serif; font-size:30px; color:var(--gold-light); line-height:1;
+  }
+  body.lang-hi .hero-stats .num{font-family:'Tiro Devanagari Hindi', serif;}
+  body.lang-mr .hero-stats .num{font-family:'Tiro Devanagari Marathi', serif;}
+  .hero-stats .lbl{font-size:12.5px; color:rgba(244,235,214,0.65); margin-top:6px; letter-spacing:0.03em;}
+
+  /* Kundli chart signature */
+  .chart-wrap{
+    position:relative; z-index:2;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .chart-frame{
+    position:relative; width:min(420px, 90%);
+    aspect-ratio:1/1;
+  }
+  .chart-frame svg{width:100%; height:100%;}
+  .chart-caption{
+    position:absolute; bottom:-38px; left:0; right:0; text-align:center;
+    font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(244,235,214,0.55);
+  }
+  body.lang-hi .chart-caption, body.lang-mr .chart-caption{text-transform:none; letter-spacing:0.02em; font-size:14px;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-eyebrow{
+    font-size:13px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--vermillion); margin-bottom:14px; display:flex; align-items:center; gap:12px;
+  }
+  body.lang-hi .section-eyebrow, body.lang-mr .section-eyebrow{text-transform:none; letter-spacing:0.02em; font-size:14.5px;}
+  .section-eyebrow::before{content:""; width:32px; height:1px; background:var(--vermillion); flex:none;}
+  .section-head h2{font-size:clamp(28px,3.4vw,42px); color:var(--ink);}
+  .section-head p{color:var(--ink-soft); margin-top:14px; font-size:16.5px; max-width:580px;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--parchment);}
+  .service-list{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--parchment); padding:40px 32px;
+    display:flex; flex-direction:column; gap:18px;
+  }
+  .service-glyph{width:44px; height:44px; color:var(--vermillion);}
+  .service-card h3{font-size:23px; color:var(--ink);}
+  .service-card p{color:var(--ink-soft); font-size:15.5px;}
+  .service-note{
+    font-size:13.5px; color:var(--teal); font-weight:600; letter-spacing:0.02em;
+    padding-top:6px; border-top:1px solid var(--line);
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{
+    background:linear-gradient(180deg, var(--parchment) 0%, var(--parchment-2) 100%);
+  }
+  .about-grid{
+    display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;
+  }
+  .portrait{
+    position:relative; aspect-ratio:4/5; border:1px solid var(--gold);
+    padding:14px;
+  }
+  .portrait-inner{
+    width:100%; height:100%;
+    background:
+      linear-gradient(160deg, var(--night) 0%, var(--night-3) 100%);
+    display:flex; align-items:center; justify-content:center;
+    position:relative; overflow:hidden;
+  }
+  .portrait-inner .sigil-big{width:56%; opacity:0.9;}
+  .portrait-tag{
+    position:absolute; left:-14px; bottom:28px;
+    background:var(--vermillion); color:var(--parchment);
+    padding:12px 20px; font-size:13px; letter-spacing:0.05em;
+    box-shadow:0 10px 24px rgba(0,0,0,0.18);
+  }
+  .about-body h2{font-size:clamp(27px,3vw,37px); margin-bottom:20px; color:var(--ink);}
+  .about-body p{color:var(--ink-soft); margin-bottom:16px; font-size:16px; max-width:580px;}
+  .about-marks{display:flex; gap:36px; margin-top:28px; flex-wrap:wrap;}
+  .about-marks div{border-left:2px solid var(--gold); padding-left:14px;}
+  .about-marks .num{font-family:'Cormorant Garamond',serif; font-size:26px; color:var(--vermillion);}
+  body.lang-hi .about-marks .num{font-family:'Tiro Devanagari Hindi', serif;}
+  body.lang-mr .about-marks .num{font-family:'Tiro Devanagari Marathi', serif;}
+  .about-marks .lbl{font-size:13px; color:var(--ink-soft);}
+
+  /* ---------- MESSAGE ---------- */
+  .message{
+    background:var(--night);
+    color:var(--parchment);
+    position:relative;
+    overflow:hidden;
+  }
+  .message::before{
+    content:"";
+    position:absolute; left:50%; top:0; transform:translateX(-50%);
+    width:1px; height:56px; background:var(--gold);
+  }
+  .message-inner{
+    max-width:760px; margin:0 auto; text-align:center; padding-top:56px;
+  }
+  .message-mark{
+    width:38px; height:38px; color:var(--gold); margin:0 auto 24px;
+  }
+  .message-eyebrow{
+    font-size:13px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold-light); margin-bottom:26px;
+  }
+  body.lang-hi .message-eyebrow, body.lang-mr .message-eyebrow{text-transform:none; letter-spacing:0.02em; font-size:14.5px;}
+  .message-quote{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(20px, 2.4vw, 26px);
+    font-weight:500; font-style:italic;
+    line-height:1.55;
+    color:var(--parchment);
+    white-space:pre-line;
+  }
+  body.lang-hi .message-quote{font-family:'Tiro Devanagari Hindi', serif; font-style:normal; font-size:clamp(19px,2.2vw,24px);}
+  body.lang-mr .message-quote{font-family:'Tiro Devanagari Marathi', serif; font-style:normal; font-size:clamp(19px,2.2vw,24px);}
+  .message-sign{
+    margin-top:32px; font-size:14px; letter-spacing:0.05em; color:var(--gold-light);
+    display:flex; align-items:center; justify-content:center; gap:14px;
+  }
+  .message-sign::before, .message-sign::after{content:""; width:36px; height:1px; background:var(--line);}
+
+  /* ---------- PROCESS ---------- */
+  .process{background:var(--night); color:var(--parchment);}
+  .process .section-eyebrow{color:var(--gold-light);}
+  .process .section-eyebrow::before{background:var(--gold);}
+  .process .section-head h2{color:var(--parchment);}
+  .process .section-head p{color:rgba(244,235,214,0.7);}
+  .process-list{
+    display:flex; flex-direction:column; border-top:1px solid var(--line);
+  }
+  .process-row{
+    display:grid; grid-template-columns:80px 1fr 1fr; gap:24px;
+    padding:26px 0; border-bottom:1px solid var(--line);
+    align-items:baseline;
+  }
+  .process-row .step{font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--gold-light);}
+  body.lang-hi .process-row .step{font-family:'Tiro Devanagari Hindi', serif;}
+  body.lang-mr .process-row .step{font-family:'Tiro Devanagari Marathi', serif;}
+  .process-row h4{font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:600; color:var(--parchment);}
+  body.lang-hi .process-row h4{font-family:'Tiro Devanagari Hindi', serif;}
+  body.lang-mr .process-row h4{font-family:'Tiro Devanagari Marathi', serif;}
+  .process-row p{font-size:14.5px; color:rgba(244,235,214,0.65);}
+
+  /* ---------- FEES / CTA ---------- */
+  .fees{
+    background:linear-gradient(135deg, var(--vermillion) 0%, #7A2C1B 100%);
+    color:var(--parchment); position:relative; overflow:hidden;
+  }
+  .fees::before{
+    content:""; position:absolute; right:-80px; top:-80px; width:320px; height:320px;
+    border:1px solid rgba(244,235,214,0.18); border-radius:50%;
+  }
+  .fees::after{
+    content:""; position:absolute; right:-30px; top:-30px; width:220px; height:220px;
+    border:1px solid rgba(244,235,214,0.14); border-radius:50%;
+  }
+  .fees-inner{
+    position:relative; z-index:2;
+    display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;
+  }
+  .fees-copy{max-width:580px;}
+  .fees-copy .section-eyebrow{color:var(--gold-light);}
+  .fees-copy .section-eyebrow::before{background:var(--gold-light);}
+  .fees-copy h2{font-size:clamp(27px,3.4vw,40px); margin-bottom:16px;}
+  .fees-copy p{color:rgba(244,235,214,0.85); font-size:16px;}
+  .fees-price{
+    text-align:center; background:rgba(0,0,0,0.15); border:1px solid rgba(244,235,214,0.25);
+    padding:34px 40px; min-width:250px;
+  }
+  .fees-price .amt{font-family:'Cormorant Garamond',serif; font-size:50px; color:var(--gold-light); line-height:1;}
+  body.lang-hi .fees-price .amt{font-family:'Tiro Devanagari Hindi', serif;}
+  body.lang-mr .fees-price .amt{font-family:'Tiro Devanagari Marathi', serif;}
+  .fees-price .per{font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:rgba(244,235,214,0.7); margin:8px 0 22px;}
+  body.lang-hi .fees-price .per, body.lang-mr .fees-price .per{text-transform:none; letter-spacing:0.02em;}
+  .fees-price .btn{width:100%; justify-content:center;}
+  .fees-price .btn + .btn{margin-top:10px;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer{background:var(--night); color:rgba(244,235,214,0.7); padding:64px 0 30px;}
+  .footer-grid{
+    display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; padding-bottom:40px;
+    border-bottom:1px solid var(--line);
+  }
+  .footer-brand{font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--gold-light); margin-bottom:14px;}
+  .footer-col h5{font-size:13px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-light); margin-bottom:16px;}
+  body.lang-hi .footer-col h5, body.lang-mr .footer-col h5{text-transform:none; letter-spacing:0.02em; font-size:14.5px;}
+  .footer-col p, .footer-col a{display:block; font-size:14.5px; margin-bottom:10px; color:rgba(244,235,214,0.75);}
+  .footer-col a:hover{color:var(--gold-light);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; padding-top:24px; font-size:12.5px; color:rgba(244,235,214,0.45);
+    flex-wrap:wrap; gap:10px;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 880px){
+    .hero-grid{grid-template-columns:1fr; padding-top:34px;}
+    .chart-wrap{order:-1; margin-bottom:10px;}
+    .chart-frame{width:min(300px, 70%);}
+    .nav-links{display:none;}
+    .lang-switch{display:none;}
+    .lang-switch-mobile{display:flex; margin-top:18px;}
+    .service-list{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .portrait{max-width:320px; margin:0 auto;}
+    .process-row{grid-template-columns:50px 1fr; }
+    .process-row p{grid-column:2/3;}
+    .fees-inner{flex-direction:column; align-items:flex-start;}
+    .fees-price{width:100%;}
+    .footer-grid{grid-template-columns:1fr; gap:28px;}
+    .section{padding:64px 0;}
+  }
+
+  :focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="stars" id="stars"></div>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brandmark">
+        <svg class="sigil" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="1"/><circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M12 1.5V4M12 20V22.5M1.5 12H4M20 12H22.5" stroke="currentColor" stroke-width="1"/></svg>
+        Sudhir Karmarkar
+      </div>
+      <div class="nav-links">
+        <a href="#message" data-i18n="nav_message">Message</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#process" data-i18n="nav_process">How it works</a>
+        <a href="#fees" data-i18n="nav_fees">Fees</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="active">EN</button>
+          <button type="button" data-lang="hi">हि</button>
+          <button type="button" data-lang="mr">मर</button>
+        </div>
+        <a class="nav-cta" href="#contact" data-i18n="nav_cta">Book a Reading</a>
+      </div>
+    </nav>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="active">English</button>
+      <button type="button" data-lang="hi">हिन्दी</button>
+      <button type="button" data-lang="mr">मराठी</button>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow" data-i18n="hero_eyebrow">Vedic Astrologer &middot; Nagpur, Maharashtra</div>
+        <h1 data-i18n-html="hero_h1">Fifty years of reading <em>what the stars already know.</em></h1>
+        <p class="hero-sub" data-i18n="hero_sub">Sudhir Karmarkar has guided families across generations through kundli making, kundli milan, and life's harder questions — with the quiet authority of five decades in practice.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 15C17.7 15.4 19 15.6 20.3 15.6C20.9 15.6 21.4 16.1 21.4 16.7V20.3C21.4 20.9 20.9 21.4 20.3 21.4C10.7 21.4 2.6 13.3 2.6 3.7C2.6 3.1 3.1 2.6 3.7 2.6H7.3C7.9 2.6 8.4 3.1 8.4 3.7C8.4 5 8.6 6.3 9 7.5C9.1 7.9 9 8.4 8.7 8.7L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span data-i18n="hero_btn_call">Call for a Reading</span>
+          </a>
+          <a class="btn btn-ghost" href="#services" data-i18n="hero_btn_services">View Services</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="num" data-i18n="stat1_num">50+</div><div class="lbl" data-i18n="stat1_lbl">Years in practice</div></div>
+          <div><div class="num" data-i18n="stat2_num">3</div><div class="lbl" data-i18n="stat2_lbl">Core disciplines</div></div>
+          <div><div class="num" data-i18n="stat3_num">₹3000</div><div class="lbl" data-i18n="stat3_lbl">Per consultation</div></div>
+        </div>
+      </div>
+
+      <div class="chart-wrap">
+        <div class="chart-frame">
+          <svg viewBox="0 0 400 400" fill="none">
+            <rect x="20" y="20" width="360" height="360" stroke="#C9A227" stroke-width="1.2"/>
+            <line x1="20" y1="20" x2="380" y2="380" stroke="#C9A227" stroke-width="1"/>
+            <line x1="380" y1="20" x2="20" y2="380" stroke="#C9A227" stroke-width="1"/>
+            <line x1="200" y1="20" x2="20" y2="200" stroke="#C9A227" stroke-width="1"/>
+            <line x1="20" y1="200" x2="200" y2="380" stroke="#C9A227" stroke-width="1"/>
+            <line x1="200" y1="380" x2="380" y2="200" stroke="#C9A227" stroke-width="1"/>
+            <line x1="380" y1="200" x2="200" y2="20" stroke="#C9A227" stroke-width="1"/>
+            <circle cx="200" cy="200" r="3" fill="#EAD08A"/>
+            <text x="200" y="60" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">12</text>
+            <text x="110" y="70" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">11</text>
+            <text x="55" y="115" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">10</text>
+            <text x="55" y="290" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">9</text>
+            <text x="90" y="335" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">8</text>
+            <text x="150" y="360" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">7</text>
+            <text x="250" y="360" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">6</text>
+            <text x="310" y="335" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">5</text>
+            <text x="345" y="290" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">4</text>
+            <text x="345" y="115" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">3</text>
+            <text x="310" y="70" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">2</text>
+            <text x="200" y="105" text-anchor="middle" fill="#EAD08A" font-family="Cormorant Garamond, serif" font-size="15">1</text>
+          </svg>
+          <div class="chart-caption" data-i18n="chart_caption">A birth chart, cast by hand</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="message" id="message">
+  <div class="wrap">
+    <div class="message-inner">
+      <svg class="message-mark" viewBox="0 0 48 48" fill="none">
+        <path d="M12 30C12 20 18 14 26 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="12" cy="30" r="6" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M30 30C30 20 36 14 44 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="30" cy="30" r="6" stroke="currentColor" stroke-width="1.4"/>
+      </svg>
+      <div class="message-eyebrow" data-i18n="message_eyebrow">In his own words</div>
+      <p class="message-quote" data-i18n="message_quote">Namaskar. I am Sudhir Karmarkar, and I have spent more than fifty years studying astrology and related sciences.</p>
+      <div class="message-sign" data-i18n="message_sign">— Sudhir Karmarkar</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="services_eyebrow">What he offers</div>
+      <h2 data-i18n="services_h2">Three disciplines, one lifetime of study</h2>
+      <p data-i18n="services_p">Each service draws on the same classical Vedic method Sudhir Karmarkar has practised since 1975 — precise, unhurried, and rooted in the birth chart itself.</p>
+    </div>
+    <div class="service-list">
+      <div class="service-card">
+        <svg class="service-glyph" viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" stroke="currentColor" stroke-width="1.3"/><line x1="6" y1="6" x2="42" y2="42" stroke="currentColor" stroke-width="1"/><line x1="42" y1="6" x2="6" y2="42" stroke="currentColor" stroke-width="1"/><line x1="24" y1="6" x2="6" y2="24" stroke="currentColor" stroke-width="1"/><line x1="24" y1="42" x2="42" y2="24" stroke="currentColor" stroke-width="1"/></svg>
+        <h3 data-i18n="service1_title">Kundli Making</h3>
+        <p data-i18n="service1_desc">A complete birth chart drawn from your date, time, and place of birth — planetary positions, dashas, and doshas explained in plain language, not just printed.</p>
+        <div class="service-note" data-i18n="service1_note">Needs: DOB, time &amp; place of birth</div>
+      </div>
+      <div class="service-card">
+        <svg class="service-glyph" viewBox="0 0 48 48" fill="none"><circle cx="18" cy="24" r="12" stroke="currentColor" stroke-width="1.3"/><circle cx="30" cy="24" r="12" stroke="currentColor" stroke-width="1.3"/></svg>
+        <h3 data-i18n="service2_title">Kundli Milan</h3>
+        <p data-i18n="service2_desc">Compatibility matching for marriage — guna milan, mangal dosha review, and an honest read on where two charts align and where care is needed.</p>
+        <div class="service-note" data-i18n="service2_note">Needs: both partners' birth details</div>
+      </div>
+      <div class="service-card">
+        <svg class="service-glyph" viewBox="0 0 48 48" fill="none"><path d="M24 6L28 20L42 24L28 28L24 42L20 28L6 24L20 20L24 6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <h3 data-i18n="service3_title">Life Guidance</h3>
+        <p data-i18n="service3_desc">Career, health, timing of major decisions, remedies for difficult transits — a grounded conversation, not a list of predictions.</p>
+        <div class="service-note" data-i18n="service3_note">Needs: existing kundli, or birth details</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait">
+      <div class="portrait-inner">
+        <svg class="sigil-big" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="38" stroke="#C9A227" stroke-width="0.8" opacity="0.6"/>
+          <circle cx="50" cy="50" r="4" fill="#EAD08A"/>
+          <g stroke="#C9A227" stroke-width="0.6" opacity="0.7">
+            <line x1="50" y1="12" x2="50" y2="88"/>
+            <line x1="12" y1="50" x2="88" y2="50"/>
+            <line x1="21" y1="21" x2="79" y2="79"/>
+            <line x1="79" y1="21" x2="21" y2="79"/>
+          </g>
+        </svg>
+      </div>
+      <div class="portrait-tag" data-i18n="portrait_tag">Nagpur, Maharashtra</div>
+    </div>
+    <div class="about-body">
+      <div class="section-eyebrow" style="color:var(--vermillion);" data-i18n="about_eyebrow">The astrologer</div>
+      <h2 data-i18n="about_h2">A practice built over five decades</h2>
+      <p data-i18n="about_p1">Sudhir Karmarkar began studying Vedic astrology in the early 1970s under traditional guidance in Nagpur, and has been reading charts professionally ever since. Over fifty years, his clients have ranged from families seeking a child's first kundli to couples weighing marriage to individuals navigating a difficult season of life.</p>
+      <p data-i18n="about_p2">His approach stays close to classical method — birth chart first, transits and dashas second, remedy only where it's genuinely called for. No generic printouts, no rushed calls: every reading is worked through by hand before it's shared.</p>
+      <div class="about-marks">
+        <div><div class="num" data-i18n="about_mark1_num">1975</div><div class="lbl" data-i18n="about_mark1_lbl">Began practising astrology</div></div>
+        <div><div class="num" data-i18n="about_mark2_num">50+</div><div class="lbl" data-i18n="about_mark2_lbl">Years of continuous readings</div></div>
+        <div><div class="num" data-i18n="about_mark3_num">Nagpur</div><div class="lbl" data-i18n="about_mark3_lbl">Based, consults nationwide</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="process_eyebrow">How a consultation works</div>
+      <h2 data-i18n="process_h2">Simple to begin, thorough once you're in</h2>
+      <p data-i18n="process_p">Every reading — whether by phone or WhatsApp — follows the same unhurried process.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-row">
+        <div class="step">01</div>
+        <h4 data-i18n="step1_title">Share your details</h4>
+        <p data-i18n="step1_desc">Send date, time, and place of birth (and your partner's, for match making) over WhatsApp or phone.</p>
+      </div>
+      <div class="process-row">
+        <div class="step">02</div>
+        <h4 data-i18n="step2_title">Chart is prepared</h4>
+        <p data-i18n="step2_desc">Sudhirji casts and studies the kundli by hand before your call — this isn't read live off software.</p>
+      </div>
+      <div class="process-row">
+        <div class="step">03</div>
+        <h4 data-i18n="step3_title">You talk it through</h4>
+        <p data-i18n="step3_desc">A telephonic or WhatsApp voice conversation, at a time that suits you, going through what the chart shows.</p>
+      </div>
+      <div class="process-row">
+        <div class="step">04</div>
+        <h4 data-i18n="step4_title">Guidance, not just data</h4>
+        <p data-i18n="step4_desc">Practical remedies and timing advice where relevant — grounded, not alarmist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fees" id="fees">
+  <div class="wrap fees-inner">
+    <div class="fees-copy">
+      <div class="section-eyebrow" data-i18n="fees_eyebrow">Consultation fee</div>
+      <h2 data-i18n="fees_h2">One conversation. One clear fee.</h2>
+      <p data-i18n="fees_p">Telephonic or WhatsApp guidance — kundli making, kundli milan, or life guidance — for a flat, nominal fee. No hidden charges, no upsells.</p>
+    </div>
+    <div class="fees-price">
+      <div class="amt" data-i18n="fees_amt">₹3,000</div>
+      <div class="per" data-i18n="fees_per">per consultation</div>
+      <a class="btn btn-primary" href="tel:+917798848859" data-i18n="fees_btn_call">Call Now</a>
+      <a class="btn btn-ghost" style="color:var(--parchment); border-color:rgba(244,235,214,0.4);" href="https://wa.me/917798848859" target="_blank" rel="noopener" data-i18n="fees_btn_whatsapp">Message on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="contact_eyebrow">Get in touch</div>
+      <h2 data-i18n="contact_h2">Begin with your birth details</h2>
+      <p data-i18n="contact_p">Reach out by phone or WhatsApp with your date, time, and place of birth, and Sudhirji will confirm a time to speak.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+917798848859">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 15C17.7 15.4 19 15.6 20.3 15.6C20.9 15.6 21.4 16.1 21.4 16.7V20.3C21.4 20.9 20.9 21.4 20.3 21.4C10.7 21.4 2.6 13.3 2.6 3.7C2.6 3.1 3.1 2.6 3.7 2.6H7.3C7.9 2.6 8.4 3.1 8.4 3.7C8.4 5 8.6 6.3 9 7.5C9.1 7.9 9 8.4 8.7 8.7L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        +91 77988 48859
+      </a>
+      <a class="btn btn-ghost" style="border-color:var(--vermillion); color:var(--vermillion);" href="https://wa.me/917798848859" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Sudhir Karmarkar</div>
+        <p style="max-width:300px;" data-i18n="footer_tagline">Vedic astrologer based in Nagpur, Maharashtra — kundli making, kundli milan, and life guidance by phone or WhatsApp, for readers everywhere.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_contact_h5">Contact</h5>
+        <a href="tel:+917798848859">+91 77988 48859</a>
+        <a href="https://wa.me/917798848859" target="_blank" rel="noopener">WhatsApp Chat</a>
+        <p data-i18n="footer_location">Nagpur, Maharashtra, India</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_services_h5">Services</h5>
+        <a href="#services" data-i18n="footer_service1">Kundli Making</a>
+        <a href="#services" data-i18n="footer_service2">Kundli Milan</a>
+        <a href="#services" data-i18n="footer_service3">Life Guidance</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_copyright">&copy; 2026 Sudhir Karmarkar Astrology, Nagpur.</span>
+      <span data-i18n="footer_fee_note">Consultation fee: ₹3,000 per session, telephonic or WhatsApp.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Ambient stars in hero
+  const starField = document.getElementById('stars');
+  const starCount = 60;
+  for(let i=0;i<starCount;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random()*100 + '%';
+    s.style.top = Math.random()*100 + '%';
+    s.style.animationDelay = (Math.random()*4.5) + 's';
+    s.style.width = s.style.height = (Math.random()<0.15 ? '2.5px' : '1.5px');
+    starField.appendChild(s);
+  }
+
+  // ---------- TRANSLATIONS ----------
+  const translations = {
+    en: {
+      nav_services:"Services", nav_about:"About", nav_process:"How it works", nav_fees:"Fees", nav_cta:"Book a Reading", nav_message:"Message",
+      message_eyebrow:"In his own words",
+      message_quote:"Namaskar. I am Sudhir Karmarkar, with more than fifty years of experience in astrology and related studies.\n\nIf you have questions about your job, business, or marriage, or want a birth chart matched for future predictions, you're welcome to contact me directly by phone. Text me your date and time of birth, and I will surely be able to help and answer your questions with my experience and knowledge of astrology.\n\nI can also analyse the birth charts of your family members and offer astrological predictions for the family as a whole, if you share their details.\n\nPlease feel free to get in touch if you need any guidance based on astrology and your birth chart.",
+      message_sign:"— Sudhir Karmarkar, Dhanyawad",
+      hero_eyebrow:"Vedic Astrologer &middot; Nagpur, Maharashtra",
+      hero_h1:"Fifty years of reading <em>what the stars already know.</em>",
+      hero_sub:"Sudhir Karmarkar has guided families across generations through kundli making, kundli milan, and life's harder questions — with the quiet authority of five decades in practice.",
+      hero_btn_call:"Call for a Reading", hero_btn_services:"View Services",
+      stat1_num:"50+", stat1_lbl:"Years in practice",
+      stat2_num:"3", stat2_lbl:"Core disciplines",
+      stat3_num:"₹3000", stat3_lbl:"Per consultation",
+      chart_caption:"A birth chart, cast by hand",
+      services_eyebrow:"What he offers",
+      services_h2:"Three disciplines, one lifetime of study",
+      services_p:"Each service draws on the same classical Vedic method Sudhir Karmarkar has practised since 1975 — precise, unhurried, and rooted in the birth chart itself.",
+      service1_title:"Kundli Making",
+      service1_desc:"A complete birth chart drawn from your date, time, and place of birth — planetary positions, dashas, and doshas explained in plain language, not just printed.",
+      service1_note:"Needs: DOB, time &amp; place of birth",
+      service2_title:"Kundli Milan",
+      service2_desc:"Compatibility matching for marriage — guna milan, mangal dosha review, and an honest read on where two charts align and where care is needed.",
+      service2_note:"Needs: both partners' birth details",
+      service3_title:"Life Guidance",
+      service3_desc:"Career, health, timing of major decisions, remedies for difficult transits — a grounded conversation, not a list of predictions.",
+      service3_note:"Needs: existing kundli, or birth details",
+      about_eyebrow:"The astrologer",
+      about_h2:"A practice built over five decades",
+      about_p1:"Sudhir Karmarkar began studying Vedic astrology in the early 1970s under traditional guidance in Nagpur, and has been reading charts professionally ever since. Over fifty years, his clients have ranged from families seeking a child's first kundli to couples weighing marriage to individuals navigating a difficult season of life.",
+      about_p2:"His approach stays close to classical method — birth chart first, transits and dashas second, remedy only where it's genuinely called for. No generic printouts, no rushed calls: every reading is worked through by hand before it's shared.",
+      about_mark1_num:"1975", about_mark1_lbl:"Began practising astrology",
+      about_mark2_num:"50+", about_mark2_lbl:"Years of continuous readings",
+      about_mark3_num:"Nagpur", about_mark3_lbl:"Based, consults nationwide",
+      portrait_tag:"Nagpur, Maharashtra",
+      process_eyebrow:"How a consultation works",
+      process_h2:"Simple to begin, thorough once you're in",
+      process_p:"Every reading — whether by phone or WhatsApp — follows the same unhurried process.",
+      step1_title:"Share your details", step1_desc:"Send date, time, and place of birth (and your partner's, for match making) over WhatsApp or phone.",
+      step2_title:"Chart is prepared", step2_desc:"Sudhirji casts and studies the kundli by hand before your call — this isn't read live off software.",
+      step3_title:"You talk it through", step3_desc:"A telephonic or WhatsApp voice conversation, at a time that suits you, going through what the chart shows.",
+      step4_title:"Guidance, not just data", step4_desc:"Practical remedies and timing advice where relevant — grounded, not alarmist.",
+      fees_eyebrow:"Consultation fee",
+      fees_h2:"One conversation. One clear fee.",
+      fees_p:"Telephonic or WhatsApp guidance — kundli making, kundli milan, or life guidance — for a flat, nominal fee. No hidden charges, no upsells.",
+      fees_amt:"₹3,000", fees_per:"per consultation",
+      fees_btn_call:"Call Now", fees_btn_whatsapp:"Message on WhatsApp",
+      contact_eyebrow:"Get in touch",
+      contact_h2:"Begin with your birth details",
+      contact_p:"Reach out by phone or WhatsApp with your date, time, and place of birth, and Sudhirji will confirm a time to speak.",
+      footer_tagline:"Vedic astrologer based in Nagpur, Maharashtra — kundli making, kundli milan, and life guidance by phone or WhatsApp, for readers everywhere.",
+      footer_contact_h5:"Contact", footer_location:"Nagpur, Maharashtra, India",
+      footer_services_h5:"Services", footer_service1:"Kundli Making", footer_service2:"Kundli Milan", footer_service3:"Life Guidance",
+      footer_copyright:"&copy; 2026 Sudhir Karmarkar Astrology, Nagpur.",
+      footer_fee_note:"Consultation fee: ₹3,000 per session, telephonic or WhatsApp."
+    },
+    hi: {
+      nav_services:"सेवाएं", nav_about:"परिचय", nav_process:"प्रक्रिया", nav_fees:"शुल्क", nav_cta:"परामर्श बुक करें", nav_message:"संदेश",
+      message_eyebrow:"उन्हीं के शब्दों में",
+      message_quote:"नमस्कार। मैं सुधीर करमरकर हूं, और ज्योतिष व संबंधित विषयों में पचास वर्षों से अधिक का अनुभव रखता हूं।\n\nयदि आपके मन में नौकरी, व्यवसाय या विवाह से जुड़े प्रश्न हैं, या भविष्य के लिए कुंडली मिलान करवाना चाहते हैं, तो आप सीधे फोन पर मुझसे संपर्क कर सकते हैं। मुझे अपनी जन्म तिथि और समय भेजें, मैं अपने अनुभव और ज्ञान से आपकी अवश्य मदद करूंगा और आपके सवालों के जवाब दूंगा।\n\nयदि आप विवरण साझा करें, तो मैं आपके परिवार के सदस्यों की कुंडली का विश्लेषण भी करता हूं और पूरे परिवार के लिए ज्योतिषीय भविष्यवाणी भी प्रदान कर सकता हूं।\n\nज्योतिष और अपनी कुंडली से जुड़े किसी भी मार्गदर्शन के लिए बेझिझक संपर्क करें।",
+      message_sign:"— सुधीर करमरकर, धन्यवाद",
+      hero_eyebrow:"वैदिक ज्योतिषी · नागपुर, महाराष्ट्र",
+      hero_h1:"पचास वर्षों का अनुभव, <em>जो तारे पहले से जानते हैं उसे पढ़ने का।</em>",
+      hero_sub:"सुधीर करमरकर ने पीढ़ियों से परिवारों का मार्गदर्शन किया है — कुंडली निर्माण, कुंडली मिलान और जीवन के कठिन प्रश्नों में — पचास वर्षों के अनुभव की शांत विश्वसनीयता के साथ।",
+      hero_btn_call:"परामर्श के लिए कॉल करें", hero_btn_services:"सेवाएं देखें",
+      stat1_num:"50+", stat1_lbl:"वर्षों का अनुभव",
+      stat2_num:"3", stat2_lbl:"प्रमुख सेवाएं",
+      stat3_num:"₹3000", stat3_lbl:"प्रति परामर्श",
+      chart_caption:"हाथ से बनाई गई जन्म कुंडली",
+      services_eyebrow:"वे क्या प्रदान करते हैं",
+      services_h2:"तीन विधाएं, एक जीवनभर का अध्ययन",
+      services_p:"प्रत्येक सेवा उसी शास्त्रीय वैदिक पद्धति पर आधारित है जिसे सुधीर करमरकर 1975 से अपना रहे हैं — सटीक, धैर्यपूर्ण, और जन्म कुंडली पर आधारित।",
+      service1_title:"कुंडली निर्माण",
+      service1_desc:"आपकी जन्म तिथि, समय और स्थान से तैयार पूर्ण जन्म कुंडली — ग्रहों की स्थिति, दशाएं और दोष सरल भाषा में समझाए जाते हैं, केवल छापे नहीं जाते।",
+      service1_note:"आवश्यक: जन्म तिथि, समय और स्थान",
+      service2_title:"कुंडली मिलान",
+      service2_desc:"विवाह के लिए अनुकूलता जांच — गुण मिलान, मंगल दोष की समीक्षा, और दोनों कुंडलियों के मेल व सावधानी के बिंदुओं पर स्पष्ट राय।",
+      service2_note:"आवश्यक: दोनों पक्षों का जन्म विवरण",
+      service3_title:"जीवन मार्गदर्शन",
+      service3_desc:"करियर, स्वास्थ्य, महत्वपूर्ण निर्णयों का सही समय, कठिन गोचर के उपाय — एक व्यावहारिक बातचीत, न कि भविष्यवाणियों की सूची।",
+      service3_note:"आवश्यक: मौजूदा कुंडली, या जन्म विवरण",
+      about_eyebrow:"ज्योतिषी के बारे में",
+      about_h2:"पचास वर्षों में बना एक अभ्यास",
+      about_p1:"सुधीर करमरकर ने 1970 के दशक की शुरुआत में नागपुर में पारंपरिक मार्गदर्शन के तहत वैदिक ज्योतिष का अध्ययन शुरू किया, और तभी से पेशेवर रूप से कुंडलियां पढ़ रहे हैं। पचास वर्षों में उनके ग्राहकों में बच्चे की पहली कुंडली चाहने वाले परिवारों से लेकर विवाह पर विचार करने वाले जोड़े और जीवन के कठिन दौर से गुजर रहे व्यक्ति शामिल रहे हैं।",
+      about_p2:"उनकी पद्धति शास्त्रीय विधि के करीब रहती है — पहले जन्म कुंडली, फिर गोचर और दशाएं, और उपाय केवल तभी जब वास्तव में आवश्यक हो। कोई सामान्य प्रिंटआउट नहीं, कोई जल्दबाज़ी वाली कॉल नहीं — हर परामर्श साझा करने से पहले हाथ से तैयार किया जाता है।",
+      about_mark1_num:"1975", about_mark1_lbl:"ज्योतिष अभ्यास की शुरुआत",
+      about_mark2_num:"50+", about_mark2_lbl:"वर्षों का निरंतर अभ्यास",
+      about_mark3_num:"नागपुर", about_mark3_lbl:"यहां स्थित, देशभर में परामर्श",
+      portrait_tag:"नागपुर, महाराष्ट्र",
+      process_eyebrow:"परामर्श कैसे होता है",
+      process_h2:"शुरुआत आसान, प्रक्रिया संपूर्ण",
+      process_p:"हर परामर्श — चाहे फोन पर हो या व्हाट्सएप पर — इसी धैर्यपूर्ण प्रक्रिया का पालन करता है।",
+      step1_title:"अपना विवरण भेजें", step1_desc:"जन्म तिथि, समय और स्थान (कुंडली मिलान के लिए साथी का विवरण भी) व्हाट्सएप या फोन पर भेजें।",
+      step2_title:"कुंडली तैयार की जाती है", step2_desc:"सुधीरजी आपकी कॉल से पहले कुंडली हाथ से बनाते और उसका अध्ययन करते हैं — यह सॉफ़्टवेयर से तुरंत नहीं पढ़ी जाती।",
+      step3_title:"आप विस्तार से बात करते हैं", step3_desc:"आपके सुविधाजनक समय पर फोन या व्हाट्सएप वॉइस कॉल के ज़रिए कुंडली की पूरी जानकारी।",
+      step4_title:"मार्गदर्शन, केवल जानकारी नहीं", step4_desc:"जहां आवश्यक हो वहां व्यावहारिक उपाय और सही समय की सलाह — यथार्थवादी, बिना डराए।",
+      fees_eyebrow:"परामर्श शुल्क",
+      fees_h2:"एक बातचीत। एक स्पष्ट शुल्क।",
+      fees_p:"टेलीफोनिक या व्हाट्सएप मार्गदर्शन — कुंडली निर्माण, कुंडली मिलान, या जीवन मार्गदर्शन — एक सामान्य, निश्चित शुल्क में। कोई छिपा शुल्क नहीं, कोई अतिरिक्त बिक्री नहीं।",
+      fees_amt:"₹3,000", fees_per:"प्रति परामर्श",
+      fees_btn_call:"अभी कॉल करें", fees_btn_whatsapp:"व्हाट्सएप पर संदेश भेजें",
+      contact_eyebrow:"संपर्क करें",
+      contact_h2:"अपने जन्म विवरण के साथ शुरुआत करें",
+      contact_p:"फोन या व्हाट्सएप पर अपनी जन्म तिथि, समय और स्थान भेजें, सुधीरजी बात करने का समय तय करेंगे।",
+      footer_tagline:"नागपुर, महाराष्ट्र में स्थित वैदिक ज्योतिषी — कुंडली निर्माण, कुंडली मिलान और जीवन मार्गदर्शन फोन या व्हाट्सएप पर, हर जगह के पाठकों के लिए।",
+      footer_contact_h5:"संपर्क", footer_location:"नागपुर, महाराष्ट्र, भारत",
+      footer_services_h5:"सेवाएं", footer_service1:"कुंडली निर्माण", footer_service2:"कुंडली मिलान", footer_service3:"जीवन मार्गदर्शन",
+      footer_copyright:"&copy; 2026 सुधीर करमरकर ज्योतिष, नागपुर।",
+      footer_fee_note:"परामर्श शुल्क: ₹3,000 प्रति सत्र, टेलीफोनिक या व्हाट्सएप।"
+    },
+    mr: {
+      nav_services:"सेवा", nav_about:"परिचय", nav_process:"प्रक्रिया", nav_fees:"शुल्क", nav_cta:"सल्ला बुक करा", nav_message:"संदेश",
+      message_eyebrow:"त्यांच्याच शब्दांत",
+      message_quote:"नमस्कार. मी सुधीर करमरकर, ज्योतिषशास्त्र आणि संबंधित अभ्यासात पन्नास वर्षांहून अधिक अनुभव असलेला.\n\nतुम्हाला नोकरी, व्यवसाय किंवा विवाहाबाबत प्रश्न असतील, किंवा भविष्यासाठी कुंडली जुळवायची असेल, तर तुम्ही थेट फोनवर माझ्याशी संपर्क साधू शकता. मला तुमची जन्मतारीख आणि वेळ पाठवा, मी माझ्या अनुभवाने आणि ज्ञानाने तुम्हाला नक्कीच मदत करेन आणि तुमच्या प्रश्नांची उत्तरे देईन.\n\nतुम्ही तपशील दिल्यास, मी तुमच्या कुटुंबातील सदस्यांच्या कुंडलीचे विश्लेषणही करतो आणि संपूर्ण कुटुंबासाठी ज्योतिषीय भाकितही देऊ शकतो.\n\nज्योतिष आणि तुमच्या कुंडलीशी संबंधित कोणत्याही मार्गदर्शनासाठी संकोच न करता संपर्क साधा.",
+      message_sign:"— सुधीर करमरकर, धन्यवाद",
+      hero_eyebrow:"वैदिक ज्योतिषी · नागपूर, महाराष्ट्र",
+      hero_h1:"पन्नास वर्षांचा अनुभव, <em>तारे आधीच जे जाणतात ते वाचण्याचा.</em>",
+      hero_sub:"सुधीर करमरकर यांनी अनेक पिढ्यांच्या कुटुंबांना मार्गदर्शन केले आहे — कुंडली निर्मिती, कुंडली जुळवणी आणि आयुष्यातील कठीण प्रश्नांमध्ये — पन्नास वर्षांच्या अनुभवाच्या शांत विश्वासार्हतेसह.",
+      hero_btn_call:"सल्ल्यासाठी कॉल करा", hero_btn_services:"सेवा पहा",
+      stat1_num:"50+", stat1_lbl:"वर्षांचा अनुभव",
+      stat2_num:"3", stat2_lbl:"मुख्य सेवा",
+      stat3_num:"₹3000", stat3_lbl:"प्रति सल्लामसलत",
+      chart_caption:"हाताने तयार केलेली जन्मकुंडली",
+      services_eyebrow:"ते काय देतात",
+      services_h2:"तीन विषय, आयुष्यभराचा अभ्यास",
+      services_p:"प्रत्येक सेवा त्याच पारंपरिक वैदिक पद्धतीवर आधारित आहे जी सुधीर करमरकर 1975 पासून वापरत आहेत — अचूक, संयमी आणि जन्मकुंडलीवर आधारित.",
+      service1_title:"कुंडली निर्मिती",
+      service1_desc:"तुमच्या जन्मतारीख, वेळ आणि ठिकाणावरून तयार केलेली संपूर्ण जन्मकुंडली — ग्रहस्थिती, दशा आणि दोष सोप्या भाषेत समजावले जातात, फक्त छापले जात नाहीत.",
+      service1_note:"आवश्यक: जन्मतारीख, वेळ आणि ठिकाण",
+      service2_title:"कुंडली जुळवणी",
+      service2_desc:"विवाहासाठी सुसंगतता तपासणी — गुणमेलन, मंगळ दोषाचा आढावा, आणि दोन्ही कुंडल्या कुठे जुळतात व कुठे काळजी आवश्यक आहे याबद्दल स्पष्ट मत.",
+      service2_note:"आवश्यक: दोघांचे जन्मविवरण",
+      service3_title:"जीवन मार्गदर्शन",
+      service3_desc:"करिअर, आरोग्य, महत्त्वाच्या निर्णयांची योग्य वेळ, कठीण गोचरांवरील उपाय — एक व्यवहार्य संवाद, भाकितांची यादी नव्हे.",
+      service3_note:"आवश्यक: सध्याची कुंडली, किंवा जन्मविवरण",
+      about_eyebrow:"ज्योतिषींबद्दल",
+      about_h2:"पन्नास वर्षांत घडलेला सराव",
+      about_p1:"सुधीर करमरकर यांनी 1970 च्या दशकाच्या सुरुवातीला नागपूरमध्ये पारंपरिक मार्गदर्शनाखाली वैदिक ज्योतिषाचा अभ्यास सुरू केला, आणि तेव्हापासून ते व्यावसायिकरीत्या कुंडल्या वाचत आहेत. पन्नास वर्षांत त्यांच्या ग्राहकांमध्ये मुलाच्या पहिल्या कुंडलीसाठी येणाऱ्या कुटुंबांपासून ते विवाहाचा विचार करणाऱ्या जोडप्यांपर्यंत आणि आयुष्यातील कठीण काळातून जाणाऱ्या व्यक्तींपर्यंत सर्वांचा समावेश आहे.",
+      about_p2:"त्यांची पद्धत पारंपरिक शास्त्राच्या जवळ राहते — आधी जन्मकुंडली, नंतर गोचर आणि दशा, आणि उपाय फक्त खरोखर गरज असेल तेव्हाच. सर्वसाधारण प्रिंटआउट नाही, घाईघाईचा कॉल नाही — प्रत्येक सल्ला देण्याआधी हाताने तयार केला जातो.",
+      about_mark1_num:"1975", about_mark1_lbl:"ज्योतिष सरावाची सुरुवात",
+      about_mark2_num:"50+", about_mark2_lbl:"वर्षांचा सातत्यपूर्ण सराव",
+      about_mark3_num:"नागपूर", about_mark3_lbl:"येथे स्थित, देशभर सल्ला",
+      portrait_tag:"नागपूर, महाराष्ट्र",
+      process_eyebrow:"सल्लामसलत कशी होते",
+      process_h2:"सुरुवात सोपी, प्रक्रिया सखोल",
+      process_p:"प्रत्येक सल्ला — फोनवर असो वा व्हॉट्सअॅपवर — याच संयमी प्रक्रियेचे पालन करतो.",
+      step1_title:"तुमचे तपशील पाठवा", step1_desc:"जन्मतारीख, वेळ आणि ठिकाण (कुंडली जुळवणीसाठी जोडीदाराचेही) व्हॉट्सअॅप किंवा फोनवर पाठवा.",
+      step2_title:"कुंडली तयार केली जाते", step2_desc:"सुधीरजी तुमच्या कॉलआधी कुंडली हाताने तयार करून तिचा अभ्यास करतात — ही सॉफ्टवेअरवरून थेट वाचली जात नाही.",
+      step3_title:"तुम्ही सविस्तर बोलता", step3_desc:"तुम्हाला सोयीच्या वेळी फोन किंवा व्हॉट्सअॅप व्हॉइस कॉलद्वारे कुंडली काय सांगते याबद्दल चर्चा.",
+      step4_title:"मार्गदर्शन, केवळ माहिती नाही", step4_desc:"जिथे गरज आहे तिथे व्यवहार्य उपाय आणि योग्य वेळेचा सल्ला — वास्तववादी, भीती न घालता.",
+      fees_eyebrow:"सल्लामसलत शुल्क",
+      fees_h2:"एक संवाद. एक स्पष्ट शुल्क.",
+      fees_p:"टेलिफोनिक किंवा व्हॉट्सअॅप मार्गदर्शन — कुंडली निर्मिती, कुंडली जुळवणी, किंवा जीवन मार्गदर्शन — एका सर्वसाधारण, ठराविक शुल्कात. कोणतेही लपलेले शुल्क नाही, अतिरिक्त विक्री नाही.",
+      fees_amt:"₹3,000", fees_per:"प्रति सल्लामसलत",
+      fees_btn_call:"आता कॉल करा", fees_btn_whatsapp:"व्हॉट्सअॅपवर संदेश पाठवा",
+      contact_eyebrow:"संपर्क साधा",
+      contact_h2:"तुमच्या जन्मविवरणासह सुरुवात करा",
+      contact_p:"फोन किंवा व्हॉट्सअॅपवर तुमची जन्मतारीख, वेळ आणि ठिकाण पाठवा, सुधीरजी बोलण्याची वेळ निश्चित करतील.",
+      footer_tagline:"नागपूर, महाराष्ट्रात स्थित वैदिक ज्योतिषी — कुंडली निर्मिती, कुंडली जुळवणी आणि जीवन मार्गदर्शन फोन किंवा व्हॉट्सअॅपवर, सर्वत्रच्या वाचकांसाठी.",
+      footer_contact_h5:"संपर्क", footer_location:"नागपूर, महाराष्ट्र, भारत",
+      footer_services_h5:"सेवा", footer_service1:"कुंडली निर्मिती", footer_service2:"कुंडली जुळवणी", footer_service3:"जीवन मार्गदर्शन",
+      footer_copyright:"&copy; 2026 सुधीर करमरकर ज्योतिष, नागपूर.",
+      footer_fee_note:"सल्लामसलत शुल्क: ₹3,000 प्रति सत्र, टेलिफोनिक किंवा व्हॉट्सअॅप."
+    }
+  };
+
+  function setLanguage(lang){
+    const dict = translations[lang] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined){ el.innerHTML = dict[key]; }
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+      const key = el.getAttribute('data-i18n-html');
+      if(dict[key] !== undefined){ el.innerHTML = dict[key]; }
+    });
+    document.documentElement.setAttribute('lang', lang);
+    document.body.classList.remove('lang-en','lang-hi','lang-mr');
+    document.body.classList.add('lang-' + lang);
+    document.querySelectorAll('.lang-switch button').forEach(btn=>{
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(btn=>{
+    btn.addEventListener('click', ()=> setLanguage(btn.getAttribute('data-lang')));
+  });
+
+  setLanguage('en');
+</script>
+
+</body>
+</html>
